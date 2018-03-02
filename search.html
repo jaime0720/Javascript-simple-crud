@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -16,16 +17,14 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Lista usuarios</title>
+    <title>Search</title>
   </head>
   <body>
+    <h1>Buscar registro</h1>
     <div class="container">
-      <h1>Lista de Usuarios</h1>
-    <h3>Crear Usuario</h3>
-    <h4></h4>
-    </div>
-    <div class="container">
-      <form>
+      <div class="jumbotron">
+        <h4>Ingresa algun criterio de busqueda</h4>
+        <form>
           <div class="form-group">
             <label for="ID">ID</label>
             <input type="text" class="form-control" id="ID" placeholder="Ingresa Nombre">
@@ -42,13 +41,14 @@
             <label for="phone" for="telefono">Telefono</label>
             <input type="text" class="form-control" id="phone" placeholder="Ingresa Telefono">
           </div>
-          <button type="button" class="btn btn-primary" id="btnAdd">Agregar</button>
-          <button type="button" class="btn btn-success disabled" id="btnUpdate"name="button">Actualizar</button>
-          <button type="button" class="btn btn-info" name="button" onclick="search()">Buscar</button>
+          <div class="text-center">
+            <button type="button" class="btn btn-success" id="btnSearch" name="button">Buscar</button>
+          </div>
         </form>
+      </div>
     </div>
     <div class="container">
-      <h2 id="subtitle">Usuarios registrados</h2>
+      <h2 id="subtitle">Registros encontrados</h2>
     </div>
     <div class="container">
       <table class="table" id="tableData">
@@ -63,29 +63,10 @@
           </tr>
         </thead>
         <tbody>
-          <!--<tr>
-            <th scope="row">1</th>
-            <td>Dato</td>
-            <td>Dato</td>
-            <td>Dato</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Dato</td>
-            <td>Dato</td>
-            <td>Datp</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Dato</td>
-            <td>Dato</td>
-            <td>Dato</td>
-          </tr>-->
+
         </tbody>
       </table>
     </div>
-
-
     <script type="text/javascript" src="crud.js">
 
     </script>

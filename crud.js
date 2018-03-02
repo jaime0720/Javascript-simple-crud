@@ -110,3 +110,11 @@ function tableBuilder() {
     //lista.push(rowArray);
   }
 }*/
+function search() {
+  window.open("search.html", "", "width=400, height=200, top=250, left=500");
+  var id = window.getElementById('ID').value,
+  name = document.getElementById('name').value,
+  adress = document.getElementById('adress').value,
+  phone = document.getElementById('phone').value;
+  console.log(id);
+}
