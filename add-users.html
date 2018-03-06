@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Lista usuarios</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lista de Usuarios</h1>
+    <h3>Crear Usuario</h3>
+    <h4></h4>
+    </div>
+    <div class="container">
+      <form>
+          <div class="form-group">
+            <label for="ID">ID</label>
+            <input type="text" class="form-control input-id" id="ID" placeholder="Ingresa Nombre">
+          </div>
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="Ingresa Nombre">
+          </div>
+          <div class="form-group">
+            <label for="adress">Direccion</label>
+            <input type="text" class="form-control" id="adress" placeholder="Ingresa Direccion">
+          </div>
+          <div class="form-group">
+            <label for="phone" for="telefono">Telefono</label>
+            <input type="text" class="form-control" id="phone" placeholder="Ingresa Telefono">
+            <input type="hidden" id="itemToEdit">
+          </div>
+          <button type="button" class="btn btn-primary" id="btnAdd">Agregar</button>
+          <button type="button" class="btn btn-success disabled" id="btnUpdate"name="button">Actualizar</button>
+          <button type="button" class="btn btn-info" name="button" onclick="renderUsers()">Buscar</button>
+        </form>
+    </div>
+    <div class="container">
+      <h2 id="subtitle">Usuarios registrados</h2>
+    </div>
+    <div class="container">
+      <table class="table" id="tableData">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Borrar</th>
+            <th scope="col">Actualizar</th>
+          </tr>
+        </thead>
+        <tbody id="body-table">
+          <!--<tr>
+            <th scope="row">1</th>
+            <td>Dato</td>
+            <td>Dato</td>
+            <td>Dato</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Dato</td>
+            <td>Dato</td>
+            <td>Datp</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Dato</td>
+            <td>Dato</td>
+            <td>Dato</td>
+          </tr>-->
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="add-users.js">
+    </script>
+  </body>
+</html>
