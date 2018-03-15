@@ -31,7 +31,7 @@
           </div>
           <div class="form-group">
             <label for="adress">Direccion</label>
-            <input type="text" class="form-control" id="adress" placeholder="Ingresa Direccion">
+            <input type="text" class="form-control" id="address" placeholder="Ingresa Direccion">
           </div>
           <div class="form-group">
             <label for="phone" for="telefono">Telefono</label>
@@ -40,7 +40,7 @@
           </div>
           <button type="button" class="btn btn-primary" id="btnAdd">Agregar</button>
           <button type="button" class="btn btn-success disabled" id="btnUpdate"name="button">Actualizar</button>
-          <button type="button" class="btn btn-info" name="button" onclick="renderUsers()">Buscar</button>
+          <!--<button type="button" class="btn btn-info" name="button" onclick="renderUsers()">Buscar</button>-->
         </form>
     </div>
     <div class="container">
@@ -52,31 +52,64 @@
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Nombre</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Telefono</th>
             <th scope="col">Borrar</th>
             <th scope="col">Actualizar</th>
           </tr>
         </thead>
         <tbody id="body-table">
-          <!--<tr>
-            <th scope="row">1</th>
-            <td>Dato</td>
-            <td>Dato</td>
-            <td>Dato</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Dato</td>
-            <td>Dato</td>
-            <td>Datp</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Dato</td>
-            <td>Dato</td>
-            <td>Dato</td>
-          </tr>-->
+
         </tbody>
       </table>
+    </div>
+    <div class="container">
+      <h1>Buscar registro</h1>
+      <div class="container">
+        <div class="jumbotron">
+          <h4>Ingresa algun criterio de busqueda</h4>
+          <form>
+            <div class="form-group">
+              <label for="ID">ID</label>
+              <input type="text" class="form-control" id="searchByID" placeholder="Busqueda por ID">
+            </div>
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" class="form-control" id="searchByName" placeholder="Busqueda por Nombre">
+            </div>
+            <div class="form-group">
+              <label for="adress">Direccion</label>
+              <input type="text" class="form-control" id="searchByAdress" placeholder="Busqueda por Direccion">
+            </div>
+            <div class="form-group">
+              <label for="phone" for="telefono">Telefono</label>
+              <input type="text" class="form-control" id="searchByPhone" placeholder="Busqueda por Telefono">
+            </div>
+            <div class="text-center">
+              <button type="button" class="btn btn-success" id="btnSearch" name="button">Buscar</button>
+              <h6> <small id="NoRecord" class="invisible">No se encontro ningún registro</small></h6>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <h2 id="subtitle">Registros encontrados</h2>
+      </div>
+      <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Direccion</th>
+              <th scope="col">Telefono</th>
+            </tr>
+          </thead>
+          <tbody id="foundTable">
+
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <script
